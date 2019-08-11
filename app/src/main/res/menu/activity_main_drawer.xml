@@ -24,6 +24,10 @@
 				android:id="@+id/nav_recycler_view"
 				android:icon="@drawable/ic_menu_send"
 				android:title="RecyclerView" />
+			<item
+				android:id="@+id/nav_networking"
+				android:icon="@drawable/ic_menu_send"
+				android:title="Networking" />
 		</menu>
 	</item>
 

@@ -103,6 +103,10 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, RecyclerViewActivity.class);
             startActivity(intent);
         }
+        else if (id == R.id.nav_networking) {
+            Intent intent = new Intent(this, NetworkingActivity.class);
+            startActivity(intent);
+        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

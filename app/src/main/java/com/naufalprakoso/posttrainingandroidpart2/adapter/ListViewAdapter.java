@@ -26,7 +26,6 @@ public class ListViewAdapter extends BaseAdapter {
         users = new ArrayList<>();
     }
 
-
     @Override
     public int getCount() {
         return users.size();
@@ -44,19 +43,19 @@ public class ListViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-
         if (view == null){
             view = LayoutInflater.from(context).inflate(R.layout.item_list_view, viewGroup, false);
         }
 
         ViewHolder viewHolder = new ViewHolder(view);
         User user = (User) getItem(i);
-        viewHolder.bindItem(user);
+        viewHolder.bind(user);
 
         return view;
     }
 
     private class ViewHolder{
+
         TextView txtTitle, txtDesc;
 
         ViewHolder(View view){
@@ -64,7 +63,7 @@ public class ListViewAdapter extends BaseAdapter {
             txtDesc = view.findViewById(R.id.txt_desc);
         }
 
-        void bindItem(User user){
+        void bind(User user){
             txtTitle.setText(user.getName());
             txtDesc.setText(user.getDesc());
         }
